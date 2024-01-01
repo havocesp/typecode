@@ -17,6 +17,7 @@ from typecode._vendor.pygments.util import get_bool_opt, get_int_opt, get_list_o
     get_choice_opt
 
 import subprocess
+from security import safe_command
 
 # Import this carefully
 try:
@@ -83,7 +84,7 @@ class FontManager:
             self._create_nix()
 
     def _get_nix_font_path(self, name, style):
-        proc = subprocess.Popen(['fc-list', "%s:style=%s" % (name, style), 'file'],
+        proc = safe_command.run(subprocess.Popen, ['fc-list', "%s:style=%s" % (name, style), 'file'],
                                 stdout=subprocess.PIPE, stderr=None)
         stdout, _ = proc.communicate()
         if proc.returncode == 0:
