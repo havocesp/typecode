@@ -32,6 +32,7 @@ from packaging import tags as packaging_tags
 from packaging import version as packaging_version
 
 import utils_pip_compatibility_tags
+from security import safe_command
 
 """
 Utilities to manage Python thirparty libraries source, binaries and metadata in
@@ -2121,8 +2122,7 @@ def call(args, verbose=TRACE):
     """
     if TRACE_DEEP:
         print("Calling:", " ".join(args))
-    with subprocess.Popen(
-        args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8"
+    with safe_command.run(subprocess.Popen, args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8"
     ) as process:
 
         stdouts = []
