@@ -225,7 +225,7 @@ def load_lib():
     return command.load_shared_library(dll_loc)
 
 
-def get_magicdb_location(_cache=[]):
+def get_magicdb_location(_cache=None):
     """
     Return the location of the magicdb loaded from either:
     - an environment variable ``TYPECODE_LIBMAGIC_DB_PATH``,
@@ -233,6 +233,7 @@ def get_magicdb_location(_cache=[]):
     - the system PATH.
     Trigger a warning if no magicdb file is found.
     """
+    _cache = [] if _cache is None else _cache
     if _cache:
         return _cache[0]
 
