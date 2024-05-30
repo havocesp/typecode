@@ -179,7 +179,8 @@ def create_dejacode_package(distribution):
     }
 
     fields_to_carry_over = [
-        "download_url" "type",
+        "download_url",
+        "type",
         "namespace",
         "name",
         "version",

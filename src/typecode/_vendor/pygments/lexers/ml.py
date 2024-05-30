@@ -872,8 +872,7 @@ class FStarLexer(RegexLexer):
     mimetypes = ['text/x-fstar']
 
     keywords = (
-        'abstract', 'attributes', 'noeq', 'unopteq', 'and'
-        'begin', 'by', 'default', 'effect', 'else', 'end', 'ensures',
+        'abstract', 'attributes', 'noeq', 'unopteq', 'and', 'begin', 'by', 'default', 'effect', 'else', 'end', 'ensures',
         'exception', 'exists', 'false', 'forall', 'fun', 'function', 'if',
         'in', 'include', 'inline', 'inline_for_extraction', 'irreducible',
         'logic', 'match', 'module', 'mutable', 'new', 'new_effect', 'noextract',

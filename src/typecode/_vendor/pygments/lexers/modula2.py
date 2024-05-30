@@ -604,9 +604,7 @@ class Modula2Lexer(RegexLexer):
         # 22 additional builtins (SYSTEM)
         'PROCESS', 'NEWPROCESS', 'BOOL8', 'BOOL16', 'BOOL32', 'CARD8',
         'CARD16', 'CARD32', 'INT8', 'INT16', 'INT32', 'REF', 'MOVE',
-        'FILL', 'GET', 'PUT', 'CC', 'int', 'unsigned', 'size_t', 'void'
-        # 3 additional builtins (COMPILER)
-        'COMPILER', 'OPTION', 'EQUATION'
+        'FILL', 'GET', 'PUT', 'CC', 'int', 'unsigned', 'size_t', 'void', 'COMPILER', 'OPTION', 'EQUATION'
     )
 
 #  P I M   S t a n d a r d   L i b r a r y   D a t a s e t s
